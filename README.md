@@ -13,8 +13,13 @@ My Telegram channel: [@petro_onishchuk_dev](https://t.me/petro_onishchuk_dev)
 
 My 👋Clubhouse account: [@petro_onishchuk](https://www.joinclubhouse.com/@petro_onishchuk)
 
-## 1. [PART #1: SwiftUI & Firebase & Authentication. To-Do App.]()
+## 1. [PART #1: SwiftUI & Firebase & Authentication. To-Do App.](https://github.com/PetroOnishchuk/To-Do-App-SwiftUI-Firebase/tree/main/To-Do%20App%20SwiftUI%20Firebase/Part1)
 
-[GitHub]()<br />
+[GitHub](https://github.com/PetroOnishchuk/To-Do-App-SwiftUI-Firebase/tree/main/To-Do%20App%20SwiftUI%20Firebase/Part1)<br />
 
-[YouTube]() 
+[YouTube](https://youtu.be/hNPIem4t1_g) 
+
+
+
+
+![visitors](https://visitor-badge.glitch.me/badge?page_id=petroonishchuk.petroonishchuk)
