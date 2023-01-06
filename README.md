@@ -18,11 +18,15 @@ My 👋Clubhouse account: [@petro_onishchuk](https://www.joinclubhouse.com/@petr
 
 ## 1. [SwiftUI & Firebase & Authentication. To-Do App.](https://github.com/PetroOnishchuk/To-Do-App-SwiftUI-Firebase/tree/main/To-Do%20App%20SwiftUI%20Firebase)  
 
+[GitHub](https://github.com/PetroOnishchuk/To-Do-App-SwiftUI-Firebase/tree/main/To-Do%20App%20SwiftUI%20Firebase)<br />
+
+[YouTube](https://www.youtube.com/watch?v=hNPIem4t1_g&list=PL3pUvT0fmHNi2Mu3_s-ZlgKKSw6-b05A7)  
+
 ### 1.1 [PART #1: SwiftUI & Firebase & Authentication. To-Do App.](https://github.com/PetroOnishchuk/To-Do-App-SwiftUI-Firebase/tree/main/To-Do%20App%20SwiftUI%20Firebase/Part1)  
 
 [GitHub](https://github.com/PetroOnishchuk/To-Do-App-SwiftUI-Firebase/tree/main/To-Do%20App%20SwiftUI%20Firebase/Part1)<br />
 
-[YouTube](https://youtu.be/hNPIem4t1_g  
+[YouTube](https://youtu.be/hNPIem4t1_g)  
   
 ### 1.2 [PART #2: SwiftUI & Firebase & Authentication. To-Do & Alert App.](https://github.com/PetroOnishchuk/To-Do-App-SwiftUI-Firebase/tree/main/To-Do%20App%20SwiftUI%20Firebase/Part2)  
 
