@@ -30,6 +30,12 @@ My 👋Clubhouse account: [@petro_onishchuk](https://www.joinclubhouse.com/@petr
 
 [YouTube](https://youtu.be/RYaexCWs-YU) 
 
+### 1.3 [PART #3: SwiftUI & Firebase & Authentication. To-Do & Firestore App.](https://github.com/PetroOnishchuk/To-Do-App-SwiftUI-Firebase/tree/main/To-Do%20App%20SwiftUI%20Firebase/Part%203)  
+
+[GitHub](https://github.com/PetroOnishchuk/To-Do-App-SwiftUI-Firebase/tree/main/To-Do%20App%20SwiftUI%20Firebase/Part%203)<br />
+
+[YouTube](https://youtu.be/octT6-yqL0Q)
+
 
 
 
