@@ -23,6 +23,10 @@ My 👋Clubhouse account: [@petro_onishchuk](https://www.joinclubhouse.com/@petr
 [YouTube](https://www.youtube.com/watch?v=hNPIem4t1_g&list=PL3pUvT0fmHNi2Mu3_s-ZlgKKSw6-b05A7)  
 
 ### 1.1 [PART #1: SwiftUI & Firebase & Authentication. To-Do App.](https://github.com/PetroOnishchuk/To-Do-App-SwiftUI-Firebase/tree/main/To-Do%20App%20SwiftUI%20Firebase/Part1)  
+#### Add Firebase to Xcode project 
+#### Create Firebase Project
+#### Add Firebase Authentication
+#### Work with NavigationStack
 
 [GitHub](https://github.com/PetroOnishchuk/To-Do-App-SwiftUI-Firebase/tree/main/To-Do%20App%20SwiftUI%20Firebase/Part1)<br />
 
@@ -38,8 +42,13 @@ My 👋Clubhouse account: [@petro_onishchuk](https://www.joinclubhouse.com/@petr
 
 [GitHub](https://github.com/PetroOnishchuk/To-Do-App-SwiftUI-Firebase/tree/main/To-Do%20App%20SwiftUI%20Firebase/Part%203)<br />
 
-[YouTube](https://youtu.be/octT6-yqL0Q)
+[YouTube](https://youtu.be/octT6-yqL0Q)  
 
+### 1.4 [PART #4: SwiftUI & Firebase & Authentication + Tasks List. To-Do & Firestore App.](https://github.com/PetroOnishchuk/To-Do-App-SwiftUI-Firebase/tree/main/To-Do%20App%20SwiftUI%20Firebase/Part%204)  
+
+[GitHub](https://github.com/PetroOnishchuk/To-Do-App-SwiftUI-Firebase/tree/main/To-Do%20App%20SwiftUI%20Firebase/Part%204)<br />
+
+[YouTube](https://youtu.be/GVLWruRD_OI)
 
 
 
