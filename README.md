@@ -65,6 +65,18 @@ My 👋Clubhouse account: [@petro_onishchuk](https://www.joinclubhouse.com/@petr
 
 [YouTube](https://youtu.be/GVLWruRD_OI)
 
+### 1.5 [PART #5: SwiftUI & Firebase & Authentication + Updates Data App.](https://github.com/PetroOnishchuk/To-Do-App-SwiftUI-Firebase/tree/main/To-Do%20App%20SwiftUI%20Firebase/Part%205)  
+
+#### Update Data in Firebase Firestore.
+#### Update Data in Firebase Authentication. 
+  
+
+[GitHub](https://github.com/PetroOnishchuk/To-Do-App-SwiftUI-Firebase/tree/main/To-Do%20App%20SwiftUI%20Firebase/Part%205)<br />
+
+[YouTube](https://youtu.be/Q-eo4-E6rU4)
+
+
+
 
 
 
