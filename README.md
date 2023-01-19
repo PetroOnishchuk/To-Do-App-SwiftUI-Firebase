@@ -73,7 +73,24 @@ My 👋Clubhouse account: [@petro_onishchuk](https://www.joinclubhouse.com/@petr
 
 [GitHub](https://github.com/PetroOnishchuk/To-Do-App-SwiftUI-Firebase/tree/main/To-Do%20App%20SwiftUI%20Firebase/Part%205)<br />
 
-[YouTube](https://youtu.be/Q-eo4-E6rU4)
+[YouTube](https://youtu.be/Q-eo4-E6rU4)  
+
+### 1.6 [PART #6: SwiftUI & Firebase & Authentication + Delete Data App.](https://github.com/PetroOnishchuk/ToDoAppSwiftUIFirebase/tree/main/Part%206)  
+
+#### Delete Data in Firebase Firestore. 
+  
+
+[GitHub](https://github.com/PetroOnishchuk/ToDoAppSwiftUIFirebase/tree/main/Part%206)<br />
+
+[YouTube](https://youtu.be/B9w3pBUi3Vc)
+
+
+
+
+
+
+
+
 
 
 
