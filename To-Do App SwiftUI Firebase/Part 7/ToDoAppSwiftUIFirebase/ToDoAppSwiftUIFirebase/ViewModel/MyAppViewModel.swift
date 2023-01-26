@@ -42,8 +42,14 @@ class MyAppViewModel: ObservableObject {
         
         if result {
             if isRunInitTasks {
-                takeCurrentUserData()
-                takeTaskList()
+            // Commit in Part 7
+//                takeCurrentUserData()
+//                takeTaskList()
+                
+                // PART 7
+                runAuthStateListener()
+                runRealTimeListenerUserData()
+                runRealTimeListenerTaskList()
                 isRunInitTasks.toggle()
             }
             
@@ -149,7 +155,8 @@ class MyAppViewModel: ObservableObject {
         
         //  Commit in the PART #6.
     //   isUserSignedIn()
-        backToRootScreen()
+        // Commit in Part #7
+        //backToRootScreen()
         isRunInitTasks = true
     }
     
@@ -239,7 +246,8 @@ class MyAppViewModel: ObservableObject {
             }
             self?.showAlertWith(title: "Add Task in DB successful", description: "Successful Add Task in Firestore Database")
             
-            self?.takeTaskList()
+            // Commit in Part #7
+           // self?.takeTaskList()
         }
     }
     
@@ -323,6 +331,9 @@ class MyAppViewModel: ObservableObject {
             }
             
             self?.showAlertWith(title: "The Update was successful", description: "The update of users firstName and LastName was successful")
+            
+            //Commit Part #7
+            //self?.takeCurrentUserData()
         }
     }
     
@@ -347,16 +358,17 @@ class MyAppViewModel: ObservableObject {
     // MARK: Updating Users Email in Firestore DB
     func updateUsersEmailDB() {
         let currentUserUID = auth.currentUser?.uid ?? ""
-        let currentUserEmail = auth.currentUser?.email ?? ""
         
+        let currentUserEmail = auth.currentUser?.email ?? ""
+       
         db.collection("users").document(currentUserUID).updateData(["email" : currentUserEmail, "lastUpdated" : FieldValue.serverTimestamp()]) {
             [weak self] error in
             guard error == nil else {
                 self?.showAlertWith(title: "Error with updating users email", description: "Error with updating users email in Firebase DB: \(String(describing: error))")
                 return
             }
-            
-            self?.takeCurrentUserData()
+            // Commit in Part #7
+           // self?.takeCurrentUserData()
         }
     }
     
@@ -379,7 +391,8 @@ class MyAppViewModel: ObservableObject {
             
             self?.showAlertWith(title: "Successful updated Task.", description: "Successful updated Task in Firebase Firestore")
             
-            self?.takeTaskList()
+            // Commit in Part #7
+           // self?.takeTaskList()
         }
     }
     
@@ -399,7 +412,8 @@ class MyAppViewModel: ObservableObject {
             
             self?.showAlertWith(title: "Successful Updated Task", description: "Successful updated Task text in Firebase Firestore")
             
-            self?.takeTaskList()
+            // Commit in Part #7
+           // self?.takeTaskList()
         }
     }
     
@@ -423,14 +437,16 @@ class MyAppViewModel: ObservableObject {
     // MARK: PART #7
     // MARK: Real-Time Update Data
     // MARK: Listener for Authentication State
-    func runAuthSateListener() {
+    func runAuthStateListener() {
         auth.addStateDidChangeListener { [weak self] auth, user in
             
             if let user = user {
                 print("User Real-Time UID: \(user.uid)")
                 print("Auth Real-Time UID: \(String(describing: auth.currentUser?.uid))")
+                
             } else {
                 print("Sign Out")
+                self?.isRunInitTasks = true
                 self?.backToRootScreen()
             }
         }
@@ -438,13 +454,14 @@ class MyAppViewModel: ObservableObject {
     }
     
     // MARK: Real-Time Listener User Data
-    func realTimeListenerUserData() {
+    func runRealTimeListenerUserData() {
         let currentUserUID = auth.currentUser?.uid ?? ""
         let docPath = db.collection("users").document(currentUserUID)
-        let currentUserEmail = auth.currentUser?.email ?? ""
+       // let currentUserEmail = self.auth.currentUser?.email ?? ""
         
         docPath.addSnapshotListener { [weak self] documentSnapshot, error in
-            
+            let currentUserEmail = self?.auth.currentUser?.email ?? ""
+         
             guard error == nil else {
                 self?.showAlertWith(title: "Error: Real-Time User Updates", description: "Error: \(String(describing: error))")
                 return
@@ -458,9 +475,9 @@ class MyAppViewModel: ObservableObject {
             let firstName = document["firstName"] as? String ?? ""
             let lastName = document["lastName"] as? String ?? ""
             
-            //let emailDB = document["email"] as? String ?? ""
+         let emailDB = document["email"] as? String ?? ""
             
-            let newUser = User(id: currentUserUID, firstName: firstName, lastName: lastName, email: currentUserEmail)
+            let newUser = User(id: currentUserUID, firstName: firstName, lastName: lastName, email: emailDB)
             
             DispatchQueue.main.async {
                 self?.mainUser = newUser
@@ -468,6 +485,46 @@ class MyAppViewModel: ObservableObject {
         }
     }
     
-    
+    // MARK: Real-Time Listener List of Task Collections
+    func runRealTimeListenerTaskList() {
+        
+        let currentUserUID = auth.currentUser?.uid ?? ""
+        
+        let docPath = db.collection("users").document(currentUserUID).collection("ToDoList").order(by: "dateCreated")
+        
+        docPath.addSnapshotListener { [weak self] querySnapshot, error in
+            guard  error == nil else {
+                self?.showAlertWith(title: "Real-Time List Listener Error", description: "Error: \(String(describing: error))")
+                return
+            }
+            guard let querySnapshot = querySnapshot else {
+                self?.showAlertWith(title: "querySnapshot == nil", description: "Error: don't have data (list of tasks) in querySnapshot")
+                return
+            }
+            
+            var tempArrayOfTasks = [Task]()
+            for document in querySnapshot.documents {
+                
+                let documentData = document.data()
+                let taskID = document.documentID
+                let taskText = documentData["text"] as? String ?? ""
+                let rawTaskDate = documentData["dateCreated"] as? Timestamp ?? Timestamp(date: Date())
+                let dateCreated = rawTaskDate.dateValue()
+                let lastUpdated = (documentData["lastUpdated"] as? Timestamp)?.dateValue()
+                let isCompleted = documentData["isCompleted"] as? Bool ?? false
+                
+                let newTask = Task(id: taskID, text: taskText, dateCreated: dateCreated, isCompleted: isCompleted, lastUpdated: lastUpdated)
+                
+                tempArrayOfTasks.append(newTask)
+            }
+            
+            DispatchQueue.main.async {
+                [weak self] in
+                self?.allTasks = tempArrayOfTasks
+            }
+            
+            
+        }
+    }
      
 }
