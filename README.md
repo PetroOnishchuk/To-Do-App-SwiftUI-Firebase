@@ -3,6 +3,8 @@
 
 This is my repository with SwiftUI Tutorial: To-Do App SwiftUI Firebase
 
+![ToDoApp01](https://github.com/PetroOnishchuk/To-Do-App-SwiftUI-FirebaseToDoApp01.jpeg)
+
 My website [petroonishchuk.com](https://petroonishchuk.com)
 
 ☕️ Support: [Buy me a coffee](https://www.buymeacoffee.com/petroonishchuk)
